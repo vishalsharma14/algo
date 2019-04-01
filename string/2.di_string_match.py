@@ -32,9 +32,9 @@
 
 def string_matching(S):
     """
-        Function
+        Function to get permutation for DI string
         :param S: string containing I or D
-        :return:
+        :return: Permutation matching given criteria
     """
     max_num = len(S)
     min_num = 0
