@@ -54,9 +54,9 @@ def hamming_distance(x, y):
 
 def hamming_distance(x, y):
     """
-    :type x: int
-    :type y: int
-    :rtype: int
+        :type x: int
+        :type y: int
+        :rtype: int
     """
     x = x ^ y
     y = 0

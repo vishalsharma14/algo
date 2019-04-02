@@ -34,8 +34,8 @@
 
 def reorder_log_files(logs):
     """
-    :param logs: List of logs
-    :return: Ordered Logs
+        :param logs: List of logs
+        :return: Ordered Logs
     """
 
     letter_logs = []

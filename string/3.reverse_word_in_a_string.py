@@ -15,9 +15,8 @@
 
 def reverse_word_in_a_string(S):
     """
-
-    :param S:
-    :return:
+        :param S: Input String
+        :return: String with reversed words
     """
     output = []
     for word in S.split(" "):

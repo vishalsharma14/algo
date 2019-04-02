@@ -42,8 +42,8 @@
 
 def goat_latin(S):
     """
-    :param S: Input String
-    :return: String in Goat Latin
+        :param S: Input String
+        :return: String in Goat Latin
     """
     index = 1
     output = []

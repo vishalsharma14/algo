@@ -17,6 +17,11 @@
 
 
 def reverse_string(input_string, k):
+    """
+        :param input_string: Input String
+        :param k: Integer K
+        :return: Reversed String
+    """
     length = len(input_string)
     pointer = 0
     response = ""
