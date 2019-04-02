@@ -50,7 +50,7 @@ def reorder_log_files(logs):
             digit_logs.append(log)
 
     for key in sorted(letter_logs_dict.keys()):
-        letter_logs.append(letter_logs_dict[key])
+        letter_logs.append(letter_logs_dict.pop(key))
 
     letter_logs.extend(digit_logs)
 
