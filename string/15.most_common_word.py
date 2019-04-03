@@ -9,7 +9,6 @@
     Words in the paragraph are not case sensitive.  The answer is in lowercase.
 
 
-
     Example:
 
     Input:
@@ -36,19 +35,20 @@
     Words only consist of letters, never apostrophes or other punctuation symbols.
 """
 
-import re
-from collections import Counter
 
-def most_common_word(words, banned_words):
+import re
+
+
+def most_common_word(paragraph, banned_words):
     """
-        :param words:
-        :param banned_words:
-        :return:
+        :param paragraph: Input Paragraph
+        :param banned_words: List of banned words
+        :return: Most Common Word
     """
     max_count = 0
     output = ""
     word_dict = {}
-    for word in re.findall("[\w]+", words):
+    for word in re.findall("[\w]+", paragraph):
         word = word.lower()
         word = word.replace('!', '').replace('?', '').replace(',', '').replace(';', '').replace('.', '').replace("'", '')
         if not word_dict.get(word):
