@@ -41,3 +41,24 @@ def count_and_say(n):
             new_num += str(len(new_num_stack)) + new_num_stack.pop()
         num_list.append(new_num)
     return num_list[n-1]
+
+
+def count_and_say_second(n):
+    """
+        :param n: Input Integer
+        :return: nth term of the count-and-say sequence
+    """
+    number = "1"
+
+    for _ in range(n-1):
+        char, temp, count = number[0], "", 0
+        for ch in number:
+            if ch == char:
+                count += 1
+            else:
+                temp += str(count) + char
+                count = 1
+                char = ch
+        temp += str(count) + char
+        number = temp
+    return number
