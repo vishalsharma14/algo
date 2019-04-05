@@ -40,9 +40,11 @@
 
 def long_pressed_name(name, typed):
     """
-        :param name:
-        :param typed:
+        :param name: Input name string
+        :param typed: Typed string
         :return:
+            True: If name was lon pressed
+            False: Otherwise
     """
     ptr1 = 0
     ptr2 = 0
