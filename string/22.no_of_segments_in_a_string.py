@@ -14,10 +14,11 @@
 
 def no_of_segments_in_a_string(input_string):
     """
-        :param str: Input string
+        :param input_string: Input string
         :return: Number of segments separated by a space
     """
-    input_string = input_string.strip()
-    if len(input_string) == 0:
-        return 0
+    # input_string = input_string.strip()
+    # if len(input_string) == 0:
+    #     return 0
+    # string.split() handles extra spaces by itself
     return len(input_string.split())
