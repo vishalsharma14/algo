@@ -18,6 +18,7 @@
 """
 
 
+# Case missing when next characters for both pointers match
 def is_valid_palindrome(s):
     """
         :param s: Input string
@@ -29,7 +30,6 @@ def is_valid_palindrome(s):
     mismatch_count = 0
 
     while low<high:
-        print("heree", s[low], s[high], low, high)
         if s[low] == s[high]:
             low += 1
             high -= 1
@@ -49,5 +49,33 @@ def is_valid_palindrome(s):
     return True
 
 
+def is_palindrome(s):
+    low = 0
+    high = len(s) - 1
+    while low < high:
+        if s[low] != s[high]:
+            return False
+        low += 1
+        high -= 1
+    return True
 
-cupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupucu
+
+def is_valid_palindrome_second(s):
+    """
+        :param s: Input string
+        :return: True if valid palindrome, False otherwise
+    """
+
+    low = 0
+    high = len(s) - 1
+
+    while low<high:
+        if s[low] != s[high]:
+            return is_palindrome(s[low+1:high+1]) or is_palindrome(s[low:high])
+        low += 1
+        high -= 1
+    return True
+
+
+
+
