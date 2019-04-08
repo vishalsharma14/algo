@@ -55,3 +55,26 @@ def does_string_has_valid_parenthesis(s):
     if len(stack) == 0:
         return True
     return False
+
+
+def does_string_has_valid_parenthesis_second(s):
+    """
+        :param s: Input String
+        :return: True if string has valid parenthesis, False otherwise
+    """
+    brackets_pair = {
+        "}": "{",
+        "]": "[",
+        ")": "("
+    }
+
+    stack = []
+    if len(s) == 0:
+        return True
+    for ch in s:
+        if ch in brackets_pair:
+            if not stack or brackets_pair[ch] != stack.pop():
+                return False
+        else:
+            stack.append(ch)
+    return not stack
