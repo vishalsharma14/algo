@@ -44,6 +44,8 @@ def find_and_replace(words, pattern):
             :return: True if the word matches the pattern, False otherwise
         """
         permutation = {}
+        if len(word) != len(pattern):
+            return False
         for x, y in zip(word, pattern):
             if permutation.setdefault(x, y) != y:
                 return False
