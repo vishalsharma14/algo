@@ -25,3 +25,10 @@
     The input string length won't exceed 1000.
 """
 
+
+def no_of_palindromic_substrings(s):
+    """
+        :param s: Input String
+        :return: Number of palindromic substrings
+    """
+
