@@ -25,9 +25,9 @@
 
 def is_binary_string_with_substrings(s, n):
     """
-        :param s:
-        :param n:
-        :return:
+        :param s: Input binary string S
+        :param n: Integer
+        :return: True if binary of all numbers from 1 to N is a substring of s, False otherwise
     """
     for i in range(1, n+1):
         binary = format(i, 'b')
