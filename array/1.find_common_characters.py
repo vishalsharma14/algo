@@ -52,3 +52,15 @@ def common_characters(a):
             j += 1
     return common_char_list
 
+
+def common_characters_second(a):
+    """
+        :param a: List of strings
+        :return: List of Common characters
+    """
+    result = Counter(a[0])
+
+    for i in range(1, len(a)):
+        result &= Counter(a[i])
+    return list(result.elements())
+
