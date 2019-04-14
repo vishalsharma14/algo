@@ -41,3 +41,24 @@ def sort_array(a):
             output.insert(odd_index, ele)
             odd_index += 2
     return output
+
+
+def sort_array_second(a):
+    """
+        :param a: Input Array
+        :return: Sorted Array
+    """
+    even_index = 0
+    odd_index = 1
+    size = len(a)
+
+    while even_index < size and odd_index < size:
+        if a[even_index] % 2 == 0:
+            even_index += 2
+        elif a[odd_index] % 2 == 1:
+            odd_index += 2
+        else:
+            a[even_index], a[odd_index] = a[odd_index], a[even_index]
+            even_index += 2
+            odd_index += 2
+    return a
