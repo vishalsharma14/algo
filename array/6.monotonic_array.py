@@ -62,4 +62,3 @@ def is_array_monotonic(arr):
         if dec == 1 and inc == 1:
             return False
     return True
-
