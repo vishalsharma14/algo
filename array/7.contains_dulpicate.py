@@ -26,8 +26,8 @@ from collections import Counter
 
 def does_array_contains_duplicate(arr):
     """
-        :param arr:
-        :return:
+        :param arr: Input Array
+        :return: True if array does not contain duplicates, False otherwise
     """
     count_dict = Counter(arr)
     for key in count_dict:
