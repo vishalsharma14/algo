@@ -64,9 +64,7 @@ def reshape_matrix(matrix, new_rows, new_columns):
 
     for i in range(new_rows):
         temp = []
-        for j in range(new_columns):
+        for _ in range(new_columns):
             temp.append(temp_arr.pop(0))
         new_matrix[i].extend(temp)
     return new_matrix
-
-
