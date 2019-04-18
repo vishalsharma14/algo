@@ -45,10 +45,10 @@
 
 def reshape_matrix(matrix, new_rows, new_columns):
     """
-        :param matrix:
-        :param new_rows:
-        :param new_columns:
-        :return:
+        :param matrix: Original Matrix
+        :param new_rows: Rows for new matrix
+        :param new_columns: Columns for new matrix
+        :return: Reshaped matrix if reshape is possible, original matrix otherwise
     """
     rows = len(matrix)
     columns = len(matrix[0])
