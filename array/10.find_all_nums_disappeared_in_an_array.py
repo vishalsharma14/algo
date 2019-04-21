@@ -53,3 +53,22 @@ def find_disappeared_nums_second(nums):
             del num_dict[num]
 
     return num_dict.keys()
+
+
+def find_disappeared_nums_third(nums):
+    """
+        :param nums: Input Array
+        :return: Array of disappeared numbers
+    """
+    result = []
+
+    for i in range(len(nums)):
+        index = abs(nums[i]) - 1
+        nums[index] = - abs(nums[index])
+
+    print(nums)
+
+    for i in range(len(nums)):
+        if nums[i] > 0:
+            result.append(i + 1)
+    return result
