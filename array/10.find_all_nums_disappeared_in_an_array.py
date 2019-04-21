@@ -35,3 +35,21 @@ def find_disappeared_nums(nums):
         if i not in num_dict:
             output.append(i)
     return output
+
+
+def find_disappeared_nums_second(nums):
+    """
+        :param nums: Input Array
+        :return: Array of disappeared numbers
+    """
+    n = len(nums)
+    num_dict = {}
+
+    for i in range(1, n+1):
+        num_dict[i] = 1
+
+    for num in nums:
+        if num in num_dict:
+            del num_dict[num]
+
+    return num_dict.keys()
