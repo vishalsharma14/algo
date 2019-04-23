@@ -59,14 +59,15 @@ def find_disappeared_nums_third(nums):
     """
         :param nums: Input Array
         :return: Array of disappeared numbers
+
+        Time Complexity: O(n)
+        Space Complexity: O(n)
     """
     result = []
 
     for i in range(len(nums)):
         index = abs(nums[i]) - 1
         nums[index] = - abs(nums[index])
-
-    print(nums)
 
     for i in range(len(nums)):
         if nums[i] > 0:
