@@ -33,3 +33,18 @@ def find_missing_number(numbers):
         if i not in num_dict:
             return i
     return max_num + 1
+
+
+def find_missing_number_second(nums):
+    """
+        :param nums: Input array
+        :return: Missing Number
+
+        Time Complexity: O(n)
+        Space Complexity: O(1)
+    """
+    arr_sum = sum(nums)
+    n = len(nums)
+    actual_sum = n * (n+1) // 2
+
+    return actual_sum - arr_sum
