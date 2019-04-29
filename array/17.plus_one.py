@@ -40,3 +40,18 @@ def plus_one(arr):
         output.insert(0, remainder)
         int_num = remaining
     return output
+
+
+def plus_one_second_method(digits):
+    """
+        :param digits: Input Array
+        :return: Array after adding 1 to the integer representation
+    """
+    i = len(digits) - 1
+    while i >=0:
+        digits[i] = digits[i] + 1 if digits[i] < 9 else 0
+        if digits[i]:
+            return digits
+        i -= 1
+    digits.insert(0, 1)
+    return digits
