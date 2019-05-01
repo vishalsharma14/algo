@@ -37,3 +37,15 @@ def get_insert_position(array, target):
         elif array[i] == target:
             return i
     return len(array)
+
+
+def get_insert_position_second(array, target):
+    """
+        :param array: Input array
+        :param target: Target Value
+        :return: Index where target is found or should be inserted
+    """
+    for i in range(len(array)):
+        if array[i] >= target:
+            return i
+    return len(array)
