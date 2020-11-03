@@ -36,6 +36,12 @@ Only one valid answer exists.
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        """
+            :param nums: Input Array
+            :param target: Target sum
+            :return: Indexes of elements which adds up to target sum
+                     None if not found
+        """
         lookup_dict = dict()
         for i in range(len(nums)):
             num = nums[i]

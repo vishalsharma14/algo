@@ -36,6 +36,10 @@ Constraints:
 
 class Solution:
     def reverse(self, x: int) -> int:
+        """
+            :param x: Input integer
+            :return: Reversed Integer if in range, 0 otherwise
+        """
         if x < 0:
             response = f"-{str(x)[:0:-1]}"
         else:
